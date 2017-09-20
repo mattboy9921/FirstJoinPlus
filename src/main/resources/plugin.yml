@@ -1,20 +1,22 @@
-name: ${plugin.name}
-main: ${plugin.groupID}.${plugin.name.lower}.${plugin.name}
-version: ${plugin.version}
+name: ${project.artifactId}
+main: com.chaseoes.firstjoinplus.FirstJoinPlus
+version: ${project.version}
 description: ${project.description}
 author: chaseoes
 dev-url: http://dev.bukkit.org/server-mods/${plugin.name.lower}/
 website: http://dev.bukkit.org/server-mods/${plugin.name.lower}/
 softdepend: [GeoIPTools]
 commands:
-  ${plugin.name.lower}:
-    description: ${plugin.name} command(s).
+  firstjoinplus:
+    description: ${project.name} command(s).
     aliases: fjp
-    usage: /${plugin.name.lower} [reload|setspawn|debug]
+    usage: /firstjoinplus [reload|setspawn|debug]
 permissions:
-  ${plugin.name.lower}.reload:
+  firstjoinplus.reload:
     description: Permission to use the /${plugin.name.lower} reload command.
-  ${plugin.name.lower}.setspawn:
+  firstjoinplus.setspawn:
     description: Permission to use the /${plugin.name.lower} setspawn command.
-  ${plugin.name.lower}.debug:
+  firstjoinplus.debug:
     description: Permission to use the /${plugin.name.lower} debug command.
+  firstoinplus.exempt:
+    description: Exempts user from FJP.

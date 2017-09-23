@@ -26,7 +26,7 @@ public class PlayerListeners implements Listener {
             Utilities.debugPlayer(player, false);
         }
 
-        if (!existingPlayer) {
+        if (!existingPlayer && !player.hasPermission("firstjoinplus.exempt")) {
             FirstJoinPlus.getInstance().getServer().getPluginManager().callEvent(new FirstJoinEvent(event));
             return;
         }
